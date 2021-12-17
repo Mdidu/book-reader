@@ -1,0 +1,19 @@
+.cardLink { 
+  width: 150px;
+  display: grid;
+  align-items: end;
+  text-decoration: none;
+}
+img {
+  grid-row: 1;
+  grid-column: 3;
+  z-index: -1;
+}
+.titleBook {
+  grid-row: 1;
+  grid-column: 3;
+  height: fit-content;
+  text-align: center;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.6);
+}

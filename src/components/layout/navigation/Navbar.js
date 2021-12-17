@@ -6,7 +6,19 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
 
-  const genres = ["Shonen", "War"];
+  const genres = [
+    "Shonen",
+    "Comedy",
+    "Martial Arts",
+    "School Life",
+    "Mystery",
+    "Romance",
+    "Fantasy",
+    "Horror",
+    "Tragery",
+    "Drama",
+  ];
+
   const bookListState = [
     "Latest Release",
     "Hot Book",
