@@ -1,0 +1,24 @@
+.menuTitle {
+  cursor: pointer;
+}
+.dropdownMenu { 
+  display: none;
+  margin: 0;
+  background-color: royalblue;
+  color: white;
+}
+.dropdownMenu a {
+  color: white;
+  text-decoration: none;
+}
+.menuTitle:hover .dropdownMenu {
+  display: block;
+  position: absolute;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menuTitle:hover .dropdownMenu {
+    position: relative;
+  }
+}
