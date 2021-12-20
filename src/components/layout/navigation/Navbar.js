@@ -2,29 +2,11 @@ import React, { useState } from "react";
 import BurgerMenu from "../../UI/menu/BurgerMenu";
 import MenuSelect from "../../UI/menu/MenuSelect";
 import styles from "./Navbar.module.css";
+import genres from "../../../datas/genre.json";
+import bookListState from "../../../datas/book-list-state.json";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
-
-  const genres = [
-    "Shonen",
-    "Comedy",
-    "Martial Arts",
-    "School Life",
-    "Mystery",
-    "Romance",
-    "Fantasy",
-    "Horror",
-    "Tragery",
-    "Drama",
-  ];
-
-  const bookListState = [
-    "Latest Release",
-    "Hot Book",
-    "Completed Book",
-    "Most Popular",
-  ];
 
   const hiddenClass = display ? "" : styles.hidden;
 

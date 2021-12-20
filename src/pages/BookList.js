@@ -37,19 +37,6 @@ const BookList = () => {
   //   await setDatas(result);
   // }, []);
 
-  const genres = [
-    "Shonen",
-    "Comedy",
-    "Martial Arts",
-    "School Life",
-    "Mystery",
-    "Romance",
-    "Fantasy",
-    "Horror",
-    "Tragery",
-    "Drama",
-  ];
-
   const renderedList = bookDatas.map((obj) => (
     <tr key={obj.id}>
       <td colSpan="1">
@@ -74,7 +61,7 @@ const BookList = () => {
         </thead>
         <tbody>{renderedList}</tbody>
       </table>
-      <CategoryList title="Genres" categories={genres} />
+      <CategoryList title="Genres"/>
     </div>
   );
 };

@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./CategoryList.module.css";
+import categories from "../../datas/genre.json";
 
 const CategoryList = (props) => {
-  const { title, categories } = props;
+  const { title } = props;
   const renderedCategories = categories.map((category) => (
-    <p className={styles.category}>{category}</p>
+    <p className={styles.category} key={category.id}>
+      {category.name}
+    </p>
   ));
 
   return (
