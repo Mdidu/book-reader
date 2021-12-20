@@ -1,0 +1,34 @@
+[
+  {
+    "id" : 1,
+    "name": "Shonen"
+  },
+  {
+    "id" : 2,
+    "name": "Comedy"
+  },
+  {
+    "id" : 3,
+    "name": "Martial Arts"
+  },
+  {
+    "id" : 4,
+    "name": "School Life"
+  },
+  {
+    "id" : 5,
+    "name": "Mystery"
+  },
+  {
+    "id" : 6,
+    "name": "Drama"
+  },
+  {
+    "id" : 7,
+    "name": "Fantasy"
+  },
+  {
+    "id" : 8,
+    "name": "Horror"
+  }
+]
