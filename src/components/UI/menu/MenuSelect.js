@@ -8,13 +8,13 @@ const MenuSelect = (props) => {
   const baseRoute = route !== "" ? "/genre" : "";
 
   const renderedDatas = datas.map((value) => (
-    <li key={value}>
+    <li key={value.id}>
       <Link
         to={{
-          pathname: `${baseRoute}/${value}`,
+          pathname: `${baseRoute}/${value.name}`,
         }}
       >
-        {value}
+        {value.name}
       </Link>
     </li>
   ));
