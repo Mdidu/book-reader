@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import CategoryList from "../components/UI/CategoryList";
 import styles from "./BookList.module.css";
 import bookDatas from "../datas/book.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const BookList = () => {
-  const { category } = useParams();
+  const { name } = useParams();
   // const [datas, setDatas] = useState({
   //   id: 0,
   //   title: "",
@@ -37,31 +37,35 @@ const BookList = () => {
   //   await setDatas(result);
   // }, []);
 
-  const renderedList = bookDatas.map((obj) => (
-    <tr key={obj.id}>
+  const renderedList = bookDatas.map((book) => (
+    <tr key={book.id}>
       <td colSpan="1">
-        <img src={obj.image} alt={`${obj.title}`} width="150" height="80" />
+        <img src={book.image} alt={`${book.title}`} width="150" height="80" />
       </td>
       <td className={styles.test}>
-        <div className={styles.book__title}>{obj.title}</div>
-        <div className={styles.book__author}>{obj.author}</div>
+        <div className={styles.book__title}>
+          <Link to={{ pathname: `/book/${book.link}` }} state={{ state: book }}>
+            {book.title}
+          </Link>
+        </div>
+        <div className={styles.book__author}>{book.author}</div>
       </td>
-      <td>Chapitre {obj.nbChapter}</td>
+      <td>Chapitre {book.nbChapter}</td>
     </tr>
   ));
 
   return (
-    <div className={styles.pages}>
+    <div className={styles.bookList__pages}>
       {/* {datas.title} */}
       <table className={styles.table}>
         <thead>
           <tr>
-            <th colSpan="2">List of {category} Best Novel</th>
+            <th colSpan="2">List of {name} Best Novel</th>
           </tr>
         </thead>
         <tbody>{renderedList}</tbody>
       </table>
-      <CategoryList title="Genres"/>
+      <CategoryList title="Genres" />
     </div>
   );
 };
