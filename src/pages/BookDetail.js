@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./BookDetail.module.css";
 
 const BookDetail = () => {
@@ -14,10 +14,16 @@ const BookDetail = () => {
     i % 2 === 0 ? (
       <tr key={i}>
         <td>
-          Chapitre {i + 1} - {chapter}
+          <Link to={{ pathname: `${location.pathname}/${i + 1}` }}>
+            Chapitre {i + 1} - {chapter.title}
+          </Link>
         </td>
         <td>
-          {arr[i + 1] === undefined ? "" : `Chapitre ${i + 2} - ${arr[i + 1]}`}
+          <Link to={{ pathname: `${location.pathname}/${i + 2}` }}>
+            {arr[i + 1] === undefined
+              ? ""
+              : `Chapitre ${i + 2} - ${arr[i + 1].title}`}
+          </Link>
         </td>
       </tr>
     ) : (
