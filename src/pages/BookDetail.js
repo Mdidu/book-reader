@@ -6,7 +6,6 @@ const BookDetail = () => {
   let location = useLocation();
 
   const locationState = location.state;
-
   const bookData = locationState.state;
   const chapters = bookData.chapter;
 
@@ -14,12 +13,18 @@ const BookDetail = () => {
     i % 2 === 0 ? (
       <tr key={i}>
         <td>
-          <Link to={{ pathname: `${location.pathname}/${i + 1}` }}>
+          <Link
+            to={{ pathname: `${location.pathname}/${i + 1}` }}
+            state={chapters}
+          >
             Chapitre {i + 1} - {chapter.title}
           </Link>
         </td>
         <td>
-          <Link to={{ pathname: `${location.pathname}/${i + 2}` }}>
+          <Link
+            to={{ pathname: `${location.pathname}/${i + 2}` }}
+            state={chapters}
+          >
             {arr[i + 1] === undefined
               ? ""
               : `Chapitre ${i + 2} - ${arr[i + 1].title}`}
