@@ -8,7 +8,6 @@ const BookRead = () => {
   const navigate = useNavigate();
 
   let location = useLocation();
-
   const allChapters = location.state;
   const currentChapter = allChapters[id - 1];
 

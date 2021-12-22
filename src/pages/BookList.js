@@ -50,7 +50,14 @@ const BookList = () => {
         </div>
         <div className={styles.book__author}>{book.author}</div>
       </td>
-      <td>Chapitre {book.nbChapter}</td>
+      <td>
+        <Link
+          to={{ pathname: `/book/${book.link}/${book.chapter.length}` }}
+          state={book.chapter }
+        >
+          Chapitre {book.chapter.length}
+        </Link>
+      </td>
     </tr>
   ));
 
