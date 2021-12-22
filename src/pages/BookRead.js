@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Button from "../components/UI/Button";
+import styles from "./BookRead.module.css";
 
 const BookRead = () => {
   const { id } = useParams();
@@ -29,30 +31,35 @@ const BookRead = () => {
     </option>
   ));
   return (
-    <div>
-      <button
-        type="button"
-        onClick={previousHandler}
-        disabled={id == 1 ? true : false}
-      >
-        Chapitre précédent
-      </button>
-      <select
-        name="chapters"
-        id="chapters"
-        onChange={(e) => handleChange(e.target.value)}
-      >
-        {listChapters}
-      </select>
-      <button
-        type="button"
-        onClick={nextHandler}
-        disabled={+id === allChapters.length ? true : false}
-      >
-        Chapitre suivant
-      </button>
+    <div className={styles.bookRead__pages}>
+      <div className={styles.bookRead__navChapter}>
+        <Button
+          type="button"
+          onClick={previousHandler}
+          disabled={id == 1 ? true : false}
+          className={styles.bookRead__btn}
+        >
+          ◄ Chapitre précédent
+        </Button>
+        <select
+          name="chapters"
+          id="chapters"
+          onChange={(e) => handleChange(e.target.value)}
+        >
+          {listChapters}
+        </select>
+        <Button
+          type="button"
+          onClick={nextHandler}
+          disabled={+id === allChapters.length ? true : false}
+          className={styles.bookRead__btn}
+        >
+          Chapitre suivant ►
+        </Button>
+      </div>
+
       <h1>{currentChapter.title}</h1>
-      <p>{currentChapter.body}</p>
+      <p className={styles.bookRead__body}>{currentChapter.body}</p>
     </div>
   );
 };

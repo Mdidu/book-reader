@@ -1,0 +1,27 @@
+.bookRead__pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.bookRead__navChapter * {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.bookRead__btn {
+  color: white;
+  background-color: rgb(92, 184, 92);
+  border-color: rgb(92, 184, 92);
+  border: none;
+  box-sizing: border-box;
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.bookRead__btn:disabled {
+  cursor: default;
+  background-color: rgba(92, 184, 92, 0.5);
+}
+.bookRead__body {
+  width: 80%;
+}
