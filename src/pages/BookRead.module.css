@@ -4,6 +4,9 @@
   align-items: center;
   margin-top: 20px;
 }
+.bookRead__pages h1, .bookRead__body {
+  margin-top: 15px;
+}
 .bookRead__navChapter * {
   margin-left: 10px;
   cursor: pointer;

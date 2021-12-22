@@ -43,7 +43,7 @@ const BookDetail = () => {
             src={bookData.image}
             alt={bookData.title}
             width="150"
-            height="80"
+            height="120"
           />
           <div>
             <span className={styles.bookDetail__infoRow}>Author :</span>
@@ -58,6 +58,7 @@ const BookDetail = () => {
             {bookData.status}
           </div>
         </div>
+        <div className={styles.bookDetail__bar}></div>
         <div className={styles.bookDetail__body}>
           <h1>{bookData.title}</h1>
           <div>{bookData.summary}</div>

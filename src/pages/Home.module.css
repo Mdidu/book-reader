@@ -1,6 +1,6 @@
 .home__h1 {
   font-size: 16px;
-  margin-left: 15px;
+  margin: 10px 0px 10px 15px;
 }
 .home__allCard {
   display: flex;
