@@ -19,7 +19,7 @@ const BookList = () => {
           <div className={styles.book__title}>
             <Link
               to={{ pathname: `/book/${book.link}` }}
-              state={{ state: book }}
+              state={ book }
             >
               {book.title}
             </Link>

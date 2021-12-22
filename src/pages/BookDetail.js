@@ -5,8 +5,7 @@ import styles from "./BookDetail.module.css";
 const BookDetail = () => {
   let location = useLocation();
 
-  const locationState = location.state;
-  const bookData = locationState.state;
+  const bookData = location.state;
   const chapters = bookData.chapter;
 
   const renderedChapter = chapters.map((chapter, i, arr) =>

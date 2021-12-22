@@ -1,0 +1,13 @@
+.home__h1 {
+  font-size: 16px;
+  margin-left: 15px;
+}
+.home__allCard {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.home__allCard * {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
