@@ -2,7 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/layout/navigation/Navbar";
+import BookDetail from "./pages/BookDetail";
 import BookList from "./pages/BookList";
+import BookRead from "./pages/BookRead";
 import Home from "./pages/Home";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/genre/:name" element={<BookList />} />
+        <Route path="/book/:name" element={<BookDetail />} />
+        <Route path="/book/:name/:id" element={<BookRead />} />
       </Routes>
     </div>
   );

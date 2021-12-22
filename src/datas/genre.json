@@ -1,34 +1,42 @@
 [
   {
     "id" : 1,
-    "name": "Shonen"
+    "name": "Shonen",
+    "link": "shonen"
   },
   {
     "id" : 2,
-    "name": "Comedy"
+    "name": "Comedy",
+    "link": "comedy"
   },
   {
     "id" : 3,
-    "name": "Martial Arts"
+    "name": "Martial Arts",
+    "link": "martial-arts"
   },
   {
     "id" : 4,
-    "name": "School Life"
+    "name": "School Life",
+    "link": "school-life"
   },
   {
     "id" : 5,
-    "name": "Mystery"
+    "name": "Mystery",
+    "link": "mystery"
   },
   {
     "id" : 6,
-    "name": "Drama"
+    "name": "Drama",
+    "link": "drama"
   },
   {
     "id" : 7,
-    "name": "Fantasy"
+    "name": "Fantasy",
+    "link": "fantasy"
   },
   {
     "id" : 8,
-    "name": "Horror"
+    "name": "Horror",
+    "link": "horror"
   }
 ]

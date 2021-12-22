@@ -1,0 +1,27 @@
+.bookDetail__infoRow {
+  font-weight: bold;
+}
+.bookDetail__bookDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bookDetail__body {
+  width: 60%;
+}
+.bookDetail__table {
+  width: 85%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bookDetail__table thead {
+  display: flex;
+  width: 170%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #CCC;
+}
+.bookDetail__table td {
+  width: 45%;
+}

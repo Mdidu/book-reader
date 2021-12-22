@@ -1,14 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Latest Release"},
+    "name": "Latest Release",
+    "link": "latest-release"
+  },
   {
     "id": 2,
-    "name": "Hot Book"},
+    "name": "Hot Book",
+    "link": "hot-book"
+  },
   {
     "id": 3,
-    "name": "Completed Book"},
+    "name": "Completed Book",
+    "link": "completed-book"
+  },
   {
     "id": 4,
-    "name": "Most Popular"}
+    "name": "Most Popular",
+    "link": "most-popular"
+  }
 ]
