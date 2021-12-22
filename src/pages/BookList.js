@@ -8,29 +8,34 @@ const BookList = () => {
   const location = useLocation();
   const genre = location.state;
 
-  const renderedList = bookDatas.map((book) => (
-    <tr key={book.id}>
-      <td colSpan="1">
-        <img src={book.image} alt={`${book.title}`} width="150" height="80" />
-      </td>
-      <td className={styles.test}>
-        <div className={styles.book__title}>
-          <Link to={{ pathname: `/book/${book.link}` }} state={{ state: book }}>
-            {book.title}
+  const renderedList = bookDatas
+    .filter((value) => value.genre === genre)
+    .map((book) => (
+      <tr key={book.id}>
+        <td colSpan="1">
+          <img src={book.image} alt={`${book.title}`} width="150" height="80" />
+        </td>
+        <td className={styles.test}>
+          <div className={styles.book__title}>
+            <Link
+              to={{ pathname: `/book/${book.link}` }}
+              state={{ state: book }}
+            >
+              {book.title}
+            </Link>
+          </div>
+          <div className={styles.book__author}>{book.author}</div>
+        </td>
+        <td>
+          <Link
+            to={{ pathname: `/book/${book.link}/${book.chapter.length}` }}
+            state={book.chapter}
+          >
+            Chapitre {book.chapter.length}
           </Link>
-        </div>
-        <div className={styles.book__author}>{book.author}</div>
-      </td>
-      <td>
-        <Link
-          to={{ pathname: `/book/${book.link}/${book.chapter.length}` }}
-          state={book.chapter}
-        >
-          Chapitre {book.chapter.length}
-        </Link>
-      </td>
-    </tr>
-  ));
+        </td>
+      </tr>
+    ));
 
   return (
     <div className={styles.bookList__pages}>
