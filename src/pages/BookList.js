@@ -13,7 +13,7 @@ const BookList = () => {
     .map((book) => (
       <tr key={book.id}>
         <td colSpan="1">
-          <img src={book.image} alt={`${book.title}`} width="150" height="80" />
+          <img src={book.image} alt={`${book.title}`} width="150" height="120" />
         </td>
         <td className={styles.test}>
           <div className={styles.book__title}>
