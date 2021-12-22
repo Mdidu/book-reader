@@ -4,6 +4,9 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+nav a {
+  color: white;
+}
 nav ul {
   display: flex;
   flex-direction: row;

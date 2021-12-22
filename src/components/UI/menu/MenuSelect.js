@@ -11,8 +11,9 @@ const MenuSelect = (props) => {
     <li key={value.id}>
       <Link
         to={{
-          pathname: `${baseRoute}/${value.name}`,
+          pathname: `${baseRoute}/${value.link}`,
         }}
+        state={value.name}
       >
         {value.name}
       </Link>
