@@ -1,0 +1,36 @@
+.bookDetail__infoRow {
+  font-weight: bold;
+}
+.bookDetail__bookDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.bookDetail__bookDescription:nth-child(1) {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.bookDetail__bar {
+  border-left: 2px solid #CCC;
+}
+.bookDetail__body {
+  width: 60%;
+}
+.bookDetail__body h1 {
+  margin-bottom: 10px;
+}
+.bookDetail__table {
+  width: 85%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bookDetail__table thead {
+  display: flex;
+  width: 170%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #CCC;
+}
+.bookDetail__table td {
+  width: 45%;
+}

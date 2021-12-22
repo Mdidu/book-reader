@@ -1,0 +1,34 @@
+.bookList__pages table {
+  margin-top: 10px;
+  width: 65%;
+  text-align: center;
+}
+.bookList__pages tr {
+  width: 100%;
+}
+.bookList__pages th {
+  width: 100%;
+  text-align: start;
+  border-bottom: 1px solid #CCC;
+}
+.bookList__pages td:nth-child(2) {
+  width: 60%;
+}
+.bookList__pages td:nth-child(1), .bookList__pages td:nth-child(3) {
+  width: 20%;
+}
+.bookList__pages tr td {
+  border-bottom: 1px solid black;
+}
+.book__title {
+  font-weight: bold;
+}
+.book__author {
+  font-style: italic;
+}
+.bookList__pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
