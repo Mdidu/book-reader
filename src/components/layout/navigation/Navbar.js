@@ -3,7 +3,6 @@ import BurgerMenu from "../../UI/menu/BurgerMenu";
 import MenuSelect from "../../UI/menu/MenuSelect";
 import styles from "./Navbar.module.css";
 import genres from "../../../datas/genre.json";
-import bookListState from "../../../datas/book-list-state.json";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,7 +21,6 @@ const Navbar = () => {
           <Link to={{ pathname: "" }}>BOOK</Link>
         </li>
         <div className={`${styles.allMenu} ${hiddenClass}`}>
-          <MenuSelect title="Book List ▼" datas={bookListState} />
           <MenuSelect title="Genre ▼" datas={genres} route={"genre"} />
         </div>
       </ul>
